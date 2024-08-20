@@ -1,14 +1,20 @@
-import logo from './logo.svg';
+
 import './App.css';
-import { BrowserRouter, Route, Router } from 'react-router-dom';
+// import { createRoot } from "react-dom/client";
+
+import { BrowserRouter, Route, Routes,  } from 'react-router-dom';
 import Home from './Home';
+import About from './about';
 
 function App() {
   return (
  <BrowserRouter>
- <Router>
+ <Routes>
   <Route path='/' element={<Home></Home>}/>
- </Router>
+  <Route path='/about' element={<About/>}/>
+  <Route path='/' element={<Home></Home>}/>
+  <Route path='/singleProduct/:id' element={<Home></Home>}/>
+ </Routes>
  </BrowserRouter>
   );
 }
