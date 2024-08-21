@@ -9,9 +9,16 @@ import SingleProduct from './singleProduct/singleProduct';
 import Contact from './contact/contact';
 import Card from './card/card';
 import Error from './error/error';
+import { ThemeProvider } from 'styled-components';
 
 function App() {
+  const theme={
+    colors:{
+      bg:"black"
+    },
+  }
   return (
+    <ThemeProvider>
  <BrowserRouter>
  <Routes>
   <Route path='/' element={<Home></Home>}/>
@@ -22,6 +29,7 @@ function App() {
   <Route path='/error' element={<Error/>}/>
  </Routes>
  </BrowserRouter>
+ </ThemeProvider>
   );
 }
 
