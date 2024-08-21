@@ -11,6 +11,8 @@ import Card from './card/card';
 import Error from './error/error';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from './GlobalStyle';
+import Header from './components/Header';
+import Product from './product/product';
 
 function App() {
   const theme={
@@ -22,10 +24,13 @@ function App() {
     <ThemeProvider theme={theme}>
  <BrowserRouter>
  <GlobalStyle/>
+ <Header/>
  <Routes>
   <Route path='/' element={<Home></Home>}/>
   <Route path='/about' element={<About/>}/>
-  <Route path='/' element={<Contact/>}/>
+  <Route path='/contact' element={<Contact/>}/>
+  <Route path='/product' element={<Product/>}/>
+
   <Route path='/singleProduct/:id' element={<SingleProduct/>}/>
   <Route path='/card' element={<Card/>}/>
   <Route path='/error' element={<Error/>}/>
