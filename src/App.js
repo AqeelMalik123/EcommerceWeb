@@ -10,16 +10,18 @@ import Contact from './contact/contact';
 import Card from './card/card';
 import Error from './error/error';
 import { ThemeProvider } from 'styled-components';
+import { GlobalStyle } from './GlobalStyle';
 
 function App() {
   const theme={
     colors:{
-      bg:"black"
+      bg:"#000"
     },
   }
   return (
-    <ThemeProvider>
+    <ThemeProvider theme={theme}>
  <BrowserRouter>
+ <GlobalStyle/>
  <Routes>
   <Route path='/' element={<Home></Home>}/>
   <Route path='/about' element={<About/>}/>
