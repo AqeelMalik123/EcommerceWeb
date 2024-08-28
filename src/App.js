@@ -13,8 +13,9 @@ import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from './GlobalStyle';
 import Header from './components/Header';
 import Product from './product/product';
-// import { FiShoppingCart } from "react-icons/fi";
 import Home from './Home/Home';
+// import { FiShoppingCart } from "react-icons/fi";
+// import Home from './Home/Home';
 
 function App() {
   const theme={
@@ -28,7 +29,7 @@ function App() {
  <GlobalStyle/>
  <Header/>
  <Routes>
-  <Route path='/' element={<Home></Home>}/>
+  <Route path='/' element={<Home/>}/>
   <Route path='/about' element={<About/>}/>
   <Route path='/contact' element={<Contact/>}/>
   <Route path='/product' element={<Product/>}/>
